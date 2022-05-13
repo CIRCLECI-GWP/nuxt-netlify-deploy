@@ -25,9 +25,7 @@ jobs:
           key: nuxt3-public-cache-{{ .Branch }}
           paths:
             - ./.output/public
-
 workflows:
-  version: 2
   build-deploy:
     jobs:
       - build:
