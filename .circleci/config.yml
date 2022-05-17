@@ -25,7 +25,10 @@ jobs:
           key: nuxt3-public-cache-{{ .Branch }}
           paths:
             - ./.output/public
-      - run: ls
+      - run:
+          command: |
+            cd .output
+            ls
       - run:
           name: Deploy to Netlify
           command: ./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --prod --dir=./.output/public
