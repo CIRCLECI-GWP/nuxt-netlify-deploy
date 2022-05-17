@@ -20,7 +20,7 @@ jobs:
       #       - ./node_modules
       - run:
           name: Nuxt3 Build
-          command: npm run build
+          command: npm run generate
       # - save_cache:
       #     key: nuxt3-public-cache-{{ .Branch }}
       #     paths:
