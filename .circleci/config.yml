@@ -32,7 +32,7 @@ jobs:
             ls
       - run:
           name: Deploy to Netlify
-          command: ./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --prod --dir=~/repo/.output/public
+          command: ./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --prod --dir=./repo/.output/public
 
 workflows:
   build-deploy:
